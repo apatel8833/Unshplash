@@ -3,7 +3,8 @@ import axios from 'axios';
 import Link from 'next/link';
 import React, { useContext, useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { CentralData } from '../ContextApis/context';
+import { CentralData } from './Context';
+// import { CentralData } from '../ContextApis/context';
 
 
 

@@ -1,7 +1,8 @@
 import './globals.css'
 import { Inter } from 'next/font/google'
 
-import CentralData from './ContextApis/context';
+// import CentralData from './ContextApis/context';
+import  CentralData  from './components/Context';
 import Nav from './components/Nav';
 
 

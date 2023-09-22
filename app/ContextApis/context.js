@@ -1,19 +1,10 @@
-"use client"
-import React, { createContext, useState } from 'react';
-export const CentralData = createContext('')
+import React from 'react'
+import Context from '../components/Context'
 
-
-function context(props) {
-    const [search, setSearch] = useState([]);
-    const [input, setInput] = useState([]);
-    const [load, setLoad] = useState(1);
-    return (
-        <>
-            <CentralData.Provider value={[search, setSearch,input,setInput,load,setLoad]}>
-                {props.children}
-            </CentralData.Provider>
-        </>
-    );
+const context = () => {
+  return (
+    <Context/>
+  )
 }
 
-export default context;
+export default context
