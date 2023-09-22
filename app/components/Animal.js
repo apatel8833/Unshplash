@@ -59,7 +59,14 @@ function Animal(props) {
                                 <div className='layer'>
                                 </div>
                                 <div className='item'>
-                                    <img src={elm.user.profile_image.small}></img>
+                                    <Image
+                                    src={elm.user.profile_image.small}
+                                    height={100}
+                                    width={100}
+                                    className="img"
+                                    >
+                                    </Image>
+                                   
                                     <span>@{elm.user.username}</span>
                                     <Link href={elm.urls.small_s3}>
                                         <i className="ri-arrow-down-line"></i>
