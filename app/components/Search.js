@@ -1,6 +1,7 @@
 "use client"
 import React, { useContext, useState } from 'react'
-import { CentralData } from '../ContextApis/context'
+// import { CentralData } from '../ContextApis/context'
+import { CentralData } from './Context'
 import Link from 'next/link'
 
 const Search = () => {
