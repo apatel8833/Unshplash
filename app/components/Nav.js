@@ -4,6 +4,7 @@ import Link from 'next/link';
 import React, { useContext, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { CentralData } from './Context';
+import Image from 'next/image';
 // import { CentralData } from '../ContextApis/context';
 
 
@@ -32,7 +33,14 @@ function Nav(props) {
     <div>
       <div className='navbar'>
         <div className='navtop'>
-          <Link href="/"><img style={{ height: "2.5vw", width: '2.5vw' }} src='https://w7.pngwing.com/pngs/981/688/png-transparent-unsplash-font-awesome-brands-vol-icon-thumbnail.png' alt='not found'></img></Link>
+          <Link href="/">
+          <Image
+          src='https://w7.pngwing.com/pngs/981/688/png-transparent-unsplash-font-awesome-brands-vol-icon-thumbnail.png'
+          alt='image'
+          height={30}
+          width={30}
+          />
+          </Link>
           <form onSubmit={handleSubmitt}>
             <input
               type='search'

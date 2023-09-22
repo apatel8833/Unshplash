@@ -20,7 +20,6 @@ const Search = () => {
                     width={100}
                     alt='image'
                 />
-                <img ></img>
                 <div className='content'>
                     <h1 style={{ textTransform: "capitalize" }} >{input}</h1>
                     <p>Exotic wildlife, pet kittens — and everything in between. Uncover the beauty of the animal kingdom through your screen...</p>

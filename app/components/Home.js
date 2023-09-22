@@ -34,22 +34,7 @@ function Home(props) {
 
     }
 
-  useEffect(()=>{
-        window.addEventListener("scroll",(e)=>{
-            if (window.innerHeight + document.documentElement.scrollTop + 1 >= document.documentElement.scrollHeight) {
-                console.log(e);
-
-                setLoad((prev) => prev+1);
-            }
-        });
-        return()=>{
-            window.removeEventListener('scroll',()=>{
-                console.log('removed');
-            })
-        }
-    },[]);
-
-
+ 
     useEffect(() => {
         try {
             async function fetchData() {

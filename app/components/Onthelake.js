@@ -39,10 +39,10 @@ function Onthelake(props) {
                 />
                 <div className='content'>
                     <h1>On the Lake</h1>
-                    <p>Step into the serene world of lakeside living with our latest topic: On the lake. Show us your eclectic family cottages, lazy summer days by the water, crackling fireplaces during chilly evenings, and breathtaking sunrises and sunsets. Celebrate the simplicity and serenity of life on the lake, where one can escape the urban bustle and immerse in nature's wonders.</p>
+                    <p>Step into the serene world of lakeside living with our latest topic On the lake. Show us your eclectic family cottages, lazy summer days by the water, crackling fireplaces during chilly evenings, and breathtaking sunrises and sunsets. Celebrate the simplicity and serenity of life on the lake, where one can escape the urban bustle and immerse in natures wonders.</p>
                     <p>Powered by creators everywhere.</p>
                    
-                    <small className='pt-2'>Trending : flower, wallpapers, backgrounds, happy, love</small>
+                    <small className='pt-2'>Trending  flower, wallpapers, backgrounds, happy, love</small>
 
                 </div>
 
