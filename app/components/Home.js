@@ -4,6 +4,9 @@ import Link from 'next/link';
 import React, { useContext, useEffect, useState } from 'react';
 import { CentralData } from '../ContextApis/context';
 import { useRouter } from 'next/navigation';
+import { ToastContainer, toast } from 'react-toastify';
+
+import 'react-toastify/dist/ReactToastify.css';
 
 function Home(props) {
     const [images, setImages] = useState([]);
@@ -29,6 +32,20 @@ function Home(props) {
 
     }
 
+  useEffect(()=>{
+        window.addEventListener("scroll",(e)=>{
+            if (window.innerHeight + document.documentElement.scrollTop + 1 >= document.documentElement.scrollHeight) {
+                console.log(e);
+
+                setLoad((prev) => prev+1);
+            }
+        });
+        return()=>{
+            window.removeEventListener('scroll',()=>{
+                console.log('removed');
+            })
+        }
+    },[]);
 
 
     useEffect(() => {
@@ -51,6 +68,7 @@ function Home(props) {
 
     return (
         <div>
+            {/* <ToastContainer/> */}
             <div className='poster'>
                 <img src='https://source.unsplash.com/600x900/?Dark'></img>
                 <div className='content'>

@@ -21,6 +21,7 @@ function Nav(props) {
             setSearch(data.results);
             console.log("Nav search",search);
             router.push("/Search");
+            
         } catch (error) {
             console.log(error);
         }
