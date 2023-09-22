@@ -235,8 +235,8 @@ small{
 
 }
 
-.grid>.contentt>img {
-    /* position: relative; */
+.grid>.contentt>.img {
+    position: relative;
     height: 100%;
     width: 100%;
     /* height: auto;

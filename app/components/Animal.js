@@ -3,6 +3,7 @@
 import axios from 'axios';
 import React, { useState ,useEffect} from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 function Animal(props) {
 
@@ -30,7 +31,15 @@ function Animal(props) {
     return (
         <div>
               <div className='poster'>
-                <img src='https://source.unsplash.com/600x900/?animal'></img>
+                <Image
+                src="https://source.unsplash.com/600x900/?animal"
+                className='img'
+                height={100}
+                width={100}
+                >
+
+                </Image>
+                {/* <img src='https://source.unsplash.com/600x900/?animal'></img> */}
                 <div className='content'>
                     <h1>Animals</h1>
                     <p>Exotic wildlife, pet kittens — and everything in between. Uncover the beauty of the animal kingdom through your screen...</p>
@@ -57,9 +66,13 @@ function Animal(props) {
                                     </Link>
 
                                 </div>
-
-                                <img src={elm.urls.small} className="card-img" alt="..." />
-                                {/* </div> */}
+                                <Image
+                                src={elm.urls.small}
+                                height={0}
+                                width={1000}
+                                className='img'
+                                ></Image>
+            
                             </Link>
                         </>
             )
