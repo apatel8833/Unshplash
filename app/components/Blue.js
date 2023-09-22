@@ -2,6 +2,7 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 function Blue(props) {
 
@@ -27,7 +28,13 @@ function Blue(props) {
     return (
         <div>
             <div className='poster'>
-                <img src='https://source.unsplash.com/600x900/?blue'></img>
+                <Image
+                    src="https://source.unsplash.com/600x900/?blue"
+                    className='img'
+                    height={100}
+                    width={100}
+                    alt='image'
+                />
                 <div className='content'>
                     <h1>Blue</h1>
                     <p>In a colorful world, sometimes monochrome is the most striking of all. Colors convey so much and choosing a single one can pack a powerful punch. We chose blue—maybe you can guess why? We hope this collection inspires your most colorful ideas!
@@ -48,7 +55,14 @@ function Blue(props) {
                                 <div className='layer'>
                                 </div>
                                 <div className='item'>
-                                    <img src={elm.user.profile_image.small}></img>
+                                    <Image
+                                        src={elm.user.profile_image.small}
+                                        height={100}
+                                        width={100}
+                                        className="img"
+                                        alt='image'
+
+                                    />
                                     <span>@{elm.user.username}</span>
                                     <Link href={elm.urls.small_s3}>
                                         <i className="ri-arrow-down-line"></i>
@@ -56,7 +70,14 @@ function Blue(props) {
 
                                 </div>
 
-                                <img src={elm.urls.small} className="card-img" alt="..." />
+                                <Image
+                                    src={elm.urls.small}
+                                    height={0}
+                                    width={1000}
+                                    className='img'
+                                    alt='image'
+
+                                />
                                 {/* </div> */}
                             </Link>
                         </>

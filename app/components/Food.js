@@ -2,6 +2,7 @@
 import axios from 'axios';
 import React, { useState ,useEffect} from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 function Food(props) {
 
@@ -28,7 +29,13 @@ function Food(props) {
     return (
         <div>
               <div className='poster'>
-                <img src='https://source.unsplash.com/600x900/?food&drink'></img>
+              <Image
+                    src="https://source.unsplash.com/600x900/?food&drink"
+                    className='img'
+                    height={100}
+                    width={100}
+                    alt='image'
+                />
                 <div className='content'>
                     <h1>Food & Drink</h1>
                     <p>From simple home-cooked dinners at home, to tasting new dishes while traveling — food connects us all. This category examines the world of food photography, with shots of everything from summer picnics in the park to decadent deserts...</p>
@@ -48,7 +55,14 @@ function Food(props) {
                                 <div className='layer'>
                                 </div>
                                 <div className='item'>
-                                    <img src={elm.user.profile_image.small}></img>
+                                <Image
+                                        src={elm.user.profile_image.small}
+                                        height={100}
+                                        width={100}
+                                        className="img"
+                                        alt='image'
+
+                                    />
                                     <span>@{elm.user.username}</span>
                                     <Link href={elm.urls.small_s3}>
                                         <i className="ri-arrow-down-line"></i>
@@ -56,7 +70,14 @@ function Food(props) {
 
                                 </div>
 
-                                <img src={elm.urls.small} className="card-img" alt="..." />
+                                <Image
+                                    src={elm.urls.small}
+                                    height={0}
+                                    width={1000}
+                                    className='img'
+                                    alt='image'
+
+                                />
                                 {/* </div> */}
                             </Link>
                         </>

@@ -2,6 +2,7 @@
 import axios from 'axios';
 import React, { useState ,useEffect} from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 function Film(props) {
 
@@ -28,7 +29,13 @@ function Film(props) {
     return (
         <div>
               <div className='poster'>
-                <img src='https://source.unsplash.com/600x900/?film'></img>
+              <Image
+                    src="https://source.unsplash.com/600x900/?Film"
+                    className='img'
+                    height={100}
+                    width={100}
+                    alt='image'
+                />
                 <div className='content'>
                     <h1>Film</h1>
                     <p>Let’s honor the beginnings of photography by celebrating analog from the past and present day. From vintage polaroids to mesmerizing 35mm shots — this category examines the best of what film photography has to offer...</p>
@@ -48,7 +55,14 @@ function Film(props) {
                                 <div className='layer'>
                                 </div>
                                 <div className='item'>
-                                    <img src={elm.user.profile_image.small}></img>
+                                <Image
+                                        src={elm.user.profile_image.small}
+                                        height={100}
+                                        width={100}
+                                        className="img"
+                                        alt='image'
+
+                                    />
                                     <span>@{elm.user.username}</span>
                                     <Link href={elm.urls.small_s3}>
                                         <i className="ri-arrow-down-line"></i>
@@ -56,7 +70,14 @@ function Film(props) {
 
                                 </div>
 
-                                <img src={elm.urls.small} className="card-img" alt="..." />
+                                <Image
+                                    src={elm.urls.small}
+                                    height={0}
+                                    width={1000}
+                                    className='img'
+                                    alt='image'
+
+                                />
                                 {/* </div> */}
                             </Link>
                         </>

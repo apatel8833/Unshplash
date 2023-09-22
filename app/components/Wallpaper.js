@@ -2,6 +2,7 @@
 import axios from 'axios';
 import React, { useState ,useEffect} from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 function Wallpaper(props) {
 
@@ -29,7 +30,13 @@ function Wallpaper(props) {
     return (
         <div>
               <div className='poster'>
-                <img src='https://source.unsplash.com/600x900/?wallpaper'></img>
+              <Image
+                    src={`https://source.unsplash.com/600x900/?wallpaper`}
+                    className='img'
+                    height={100}
+                    width={100}
+                    alt='image'
+                />
                 <div className='content'>
                     <h1>Wallpapers</h1>
                     <p>From epic drone shots to inspiring moments in nature — submit your best desktop and mobile backgrounds..</p>
@@ -49,7 +56,14 @@ function Wallpaper(props) {
                                 <div className='layer'>
                                 </div>
                                 <div className='item'>
-                                    <img src={elm.user.profile_image.small}></img>
+                                <Image
+                                        src={elm.user.profile_image.small}
+                                        height={100}
+                                        width={100}
+                                        className="img"
+                                        alt='image'
+
+                                    />
                                     <span>@{elm.user.username}</span>
                                     <Link href={elm.urls.small_s3}>
                                         <i className="ri-arrow-down-line"></i>
@@ -57,7 +71,14 @@ function Wallpaper(props) {
 
                                 </div>
 
-                                <img src={elm.urls.small} className="card-img" alt="..." />
+                                <Image
+                                    src={elm.urls.small}
+                                    height={0}
+                                    width={1000}
+                                    className='img'
+                                    alt='image'
+
+                                />
                                 {/* </div> */}
                             </Link>
 

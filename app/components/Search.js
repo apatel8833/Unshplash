@@ -3,6 +3,7 @@ import React, { useContext, useState } from 'react'
 // import { CentralData } from '../ContextApis/context'
 import { CentralData } from './Context'
 import Link from 'next/link'
+import Image from 'next/image'
 
 const Search = () => {
     const [search, setSearch, input, setInput, load, setLoad] = useContext(CentralData);
@@ -12,7 +13,14 @@ const Search = () => {
     return (
         <div>
             <div className='poster'>
-                <img src={`https://source.unsplash.com/600x900/?${input}`}></img>
+            <Image
+                    src={`https://source.unsplash.com/600x900/?${input}`}
+                    className='img'
+                    height={100}
+                    width={100}
+                    alt='image'
+                />
+                <img ></img>
                 <div className='content'>
                     <h1 style={{ textTransform: "capitalize" }} >{input}</h1>
                     <p>Exotic wildlife, pet kittens — and everything in between. Uncover the beauty of the animal kingdom through your screen...</p>
@@ -33,7 +41,14 @@ const Search = () => {
                                     <div className='layer'>
                                     </div>
                                     <div className='item'>
-                                        <img src={elm.user.profile_image.small}></img>
+                                    <Image
+                                        src={elm.user.profile_image.small}
+                                        height={100}
+                                        width={100}
+                                        className="img"
+                                        alt='image'
+
+                                    />
                                         <span>@{elm.user.username}</span>
                                         <Link href={elm.urls.small_s3}>
                                             <i className="ri-arrow-down-line"></i>
@@ -41,7 +56,14 @@ const Search = () => {
 
                                     </div>
 
-                                    <img src={elm.urls.small} className="card-img" alt="..." />
+                                    <Image
+                                    src={elm.urls.small}
+                                    height={0}
+                                    width={1000}
+                                    className='img'
+                                    alt='image'
+
+                                />
                                     {/* </div> */}
                                 </Link>
                             </>

@@ -2,6 +2,7 @@
 import axios from 'axios';
 import React, { useState ,useEffect} from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 function Onthelake(props) {
 
@@ -29,7 +30,13 @@ function Onthelake(props) {
     return (
         <div>
               <div className='poster'>
-                <img src='https://source.unsplash.com/600x900/?lake'></img>
+              <Image
+                    src="https://source.unsplash.com/600x900/?lake"
+                    className='img'
+                    height={100}
+                    width={100}
+                    alt='image'
+                />
                 <div className='content'>
                     <h1>On the Lake</h1>
                     <p>Step into the serene world of lakeside living with our latest topic: On the lake. Show us your eclectic family cottages, lazy summer days by the water, crackling fireplaces during chilly evenings, and breathtaking sunrises and sunsets. Celebrate the simplicity and serenity of life on the lake, where one can escape the urban bustle and immerse in nature's wonders.</p>
@@ -49,7 +56,14 @@ function Onthelake(props) {
                                 <div className='layer'>
                                 </div>
                                 <div className='item'>
-                                    <img src={elm.user.profile_image.small}></img>
+                                <Image
+                                        src={elm.user.profile_image.small}
+                                        height={100}
+                                        width={100}
+                                        className="img"
+                                        alt='image'
+
+                                    />
                                     <span>@{elm.user.username}</span>
                                     <Link href={elm.urls.small_s3}>
                                         <i className="ri-arrow-down-line"></i>
@@ -57,7 +71,14 @@ function Onthelake(props) {
 
                                 </div>
 
-                                <img src={elm.urls.small} className="card-img" alt="..." />
+                                <Image
+                                    src={elm.urls.small}
+                                    height={0}
+                                    width={1000}
+                                    className='img'
+                                    alt='image'
+
+                                />
                                 {/* </div> */}
                             </Link>
 

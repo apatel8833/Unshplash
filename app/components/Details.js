@@ -3,6 +3,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { useParams } from "next/navigation";
 import Link from 'next/link';
+import Image from 'next/image';
 
 const Details= () => {
 
@@ -32,16 +33,30 @@ const Details= () => {
   fetchData();
   // console.log(first.id);
 
-  const cross = document.querySelector(".ri-heart-line");
-  const Detail = document.querySelector(".Detail");
+  // const cross = document.querySelector(".ri-heart-line");
+  // const Detail = document.querySelector(".Detail");
 
   return (
 
     <div>
       <div className='Detail'>
-        <img src={url.small}></img>
+      <Image
+            src={url.full}
+            height={100}
+            width={100}
+            className="img"
+            alt='image'
+
+          />
         <div className='item'>
-          <img src={usrr.small}></img>
+        <Image
+            src={usrr.small}
+            height={100}
+            width={100}
+            className="img"
+            alt='image'
+
+          />
           <span>@{usr.username}</span>
           <Link href="#" >
             <i className="ri-arrow-down-line"></i>

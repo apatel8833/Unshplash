@@ -2,6 +2,7 @@
 import axios from 'axios';
 import React, { useState ,useEffect} from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 function Art(props) {
 
@@ -30,7 +31,13 @@ function Art(props) {
     return (
         <div>
               <div className='poster'>
-                <img src='https://source.unsplash.com/600x900/?art&culture'></img>
+              <Image
+                    src="https://source.unsplash.com/600x900/?art&culture"
+                    className='img'
+                    height={100}
+                    width={100}
+                    alt='image'
+                />
                 <div className='content'>
                     <h1>Art & Culture</h1>
                     <p>Your daily dose of culture — with photography showcasing the best in art, music and literature from around the world...</p>
@@ -50,7 +57,14 @@ function Art(props) {
                                 <div className='layer'>
                                 </div>
                                 <div className='item'>
-                                    <img src={elm.user.profile_image.small}></img>
+                                <Image
+                                        src={elm.user.profile_image.small}
+                                        height={100}
+                                        width={100}
+                                        className="img"
+                                        alt='image'
+
+                                    />
                                     <span>@{elm.user.username}</span>
                                     <Link href={elm.urls.small_s3}>
                                         <i className="ri-arrow-down-line"></i>
@@ -58,8 +72,14 @@ function Art(props) {
 
                                 </div>
 
-                                <img src={elm.urls.small} className="card-img" alt="..." />
-                                {/* </div> */}
+                                <Image
+                                    src={elm.urls.small}
+                                    height={0}
+                                    width={1000}
+                                    className='img'
+                                    alt='image'
+
+                                />
                             </Link>
 
                         </>
