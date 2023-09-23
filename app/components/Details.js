@@ -1,9 +1,18 @@
 "use client"
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
-import { useParams } from "next/navigation";
+import { useParams, useRouter } from "next/navigation";
 import Link from 'next/link';
 import Image from 'next/image';
+
+
+
+//  const cross = document.querySelector(".ri-close-line");
+//   const Detail = document.querySelector(".Detail");
+//   cross.addEventListener("onclick",function(){
+//     Detail.style.display = "none"
+//   })
+
 
 const Details= () => {
 
@@ -11,10 +20,8 @@ const Details= () => {
   const [first, setFirst] = useState([]);
   const [url, setUrl] = useState([]);
   const [usr, setUsr] = useState([]);
-
   const [usrr, setUsrr] = useState([]);
-
-
+  const router = useRouter()
 
 
 
@@ -24,17 +31,8 @@ const Details= () => {
     setUrl(data.urls);
     setUsr(data.user);
     setUsrr(data.user.profile_image);
-
-
-
-    // console.log(first.id);
-
   }
   fetchData();
-  // console.log(first.id);
-
-  // const cross = document.querySelector(".ri-heart-line");
-  // const Detail = document.querySelector(".Detail");
 
   return (
 
@@ -67,6 +65,7 @@ const Details= () => {
         <i className="ri-add-fill"></i>
         <i className="ri-heart-line"></i>
         </div>
+        <i onClick={()=>router.back()} style={{position:"absolute",top:"0",right:"0",fontSize:"3vw",cursor:"pointer"}} className="ri-close-line"></i>
       </div>
     </div>
   )

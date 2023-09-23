@@ -68,7 +68,6 @@ function Wallpaper(props) {
                                     <Link href={elm.urls.small_s3}>
                                         <i className="ri-arrow-down-line"></i>
                                     </Link>
-
                                 </div>
 
                                 <Image
