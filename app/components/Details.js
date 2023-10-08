@@ -14,7 +14,7 @@ import Image from 'next/image';
 //   })
 
 
-const Details= () => {
+const Details = () => {
 
   const { id } = useParams();
   const [first, setFirst] = useState([]);
@@ -38,23 +38,28 @@ const Details= () => {
 
     <div>
       <div className='Detail'>
-      <Image
-            src={url.full}
-            height={100}
-            width={100}
-            className="img"
-            alt='image'
-
-          />
-        <div className='item'>
         <Image
+          src={url.full}
+          height={100}
+          width={100}
+          className="img"
+          alt='image'
+
+        />
+        <div className='item'>
+          {/* <Image
             src={usrr.small}
             height={100}
             width={100}
             className="img"
             alt='image'
 
-          />
+          /> */}
+          <img
+            src={usrr.small}
+            className="img"
+            alt='image'
+          ></img>
           <span>@{usr.username}</span>
           <Link href="#" >
             <i className="ri-arrow-down-line"></i>
@@ -62,10 +67,10 @@ const Details= () => {
 
         </div>
         <div className='fav'>
-        <i className="ri-add-fill"></i>
-        <i className="ri-heart-line"></i>
+          <i className="ri-add-fill"></i>
+          <i className="ri-heart-line"></i>
         </div>
-        <i onClick={()=>router.back()} style={{position:"absolute",top:"0",right:"0",fontSize:"3vw",cursor:"pointer"}} className="ri-close-line"></i>
+        <i onClick={() => router.back()} style={{ position: "absolute", top: "0", right: "0", fontSize: "3vw", cursor: "pointer" }} className="ri-close-line"></i>
       </div>
     </div>
   )

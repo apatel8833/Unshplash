@@ -56,14 +56,19 @@ function Athletics(props) {
                                 <div className='layer'>
                                 </div>
                                 <div className='item'>
-                                    <Image
+                                    {/* <Image
                                         src={elm.user.profile_image.small}
                                         height={100}
                                         width={100}
                                         className="img"
                                         alt='image'
 
-                                    />
+                                    /> */}
+                                         <img
+                                     src={elm.user.profile_image.small}
+                                     className="img"
+                                     alt='image'
+                                    ></img>
                                     <span>@{elm.user.username}</span>
                                     <Link href={elm.urls.small_s3}>
                                         <i className="ri-arrow-down-line"></i>
