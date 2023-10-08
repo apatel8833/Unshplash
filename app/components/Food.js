@@ -29,13 +29,18 @@ function Food(props) {
     return (
         <div>
               <div className='poster'>
-              <Image
+              {/* <Image
                     src="https://source.unsplash.com/600x900/?food&drink"
                     className='img'
                     height={100}
                     width={100}
                     alt='image'
-                />
+                /> */}
+                   <img
+                  src="https://source.unsplash.com/600x900/?food&drink"
+                  className='img'
+                  alt='image'
+                ></img>
                 <div className='content'>
                     <h1>Food & Drink</h1>
                     <p>From simple home-cooked dinners at home, to tasting new dishes while traveling — food connects us all. This category examines the world of food photography, with shots of everything from summer picnics in the park to decadent deserts...</p>
@@ -75,14 +80,12 @@ function Food(props) {
 
                                 </div>
 
-                                <Image
-                                    src={elm.urls.small}
-                                    height={0}
-                                    width={1000}
-                                    className='img'
-                                    alt='image'
-
-                                />
+                                <img
+                                  src={elm.urls.small}
+                                  className='img'
+                                  alt='image'
+                                >
+                                </img>
                                 {/* </div> */}
                             </Link>
                         </>

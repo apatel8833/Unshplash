@@ -30,13 +30,18 @@ function Threedrander(props) {
     return (
         <div>
               <div className='poster'>
-              <Image
+              {/* <Image
                     src={`https://source.unsplash.com/600x900/?3d`}
                     className='img'
                     height={100}
                     width={100}
                     alt='image'
-                />
+                /> */}
+                   <img
+                  src="https://source.unsplash.com/600x900/?3d"
+                  className='img'
+                  alt='image'
+                ></img>
                 <div className='content'>
                     <h1>3D Renders.</h1>
                     <p>The Unsplash community continues to push the boundaries of creativity through 3D Renders. From abstract worlds to photo-realistic interiors, this category celebrates exciting 3-dimensional images designed in the software of your choice and rendered into JPEG images.
@@ -77,14 +82,12 @@ function Threedrander(props) {
 
                                 </div>
 
-                                <Image
-                                    src={elm.urls.small}
-                                    height={0}
-                                    width={1000}
-                                    className='img'
-                                    alt='image'
-
-                                />
+                                <img
+                                  src={elm.urls.small}
+                                  className='img'
+                                  alt='image'
+                                >
+                                </img>
                                 {/* </div> */}
                             </Link>
                         </>

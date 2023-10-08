@@ -29,13 +29,18 @@ function Film(props) {
     return (
         <div>
               <div className='poster'>
-              <Image
+              {/* <Image
                     src="https://source.unsplash.com/600x900/?Film"
                     className='img'
                     height={100}
                     width={100}
                     alt='image'
-                />
+                /> */}
+                   <img
+                  src="https://source.unsplash.com/600x900/?film"
+                  className='img'
+                  alt='image'
+                ></img>
                 <div className='content'>
                     <h1>Film</h1>
                     <p>Let’s honor the beginnings of photography by celebrating analog from the past and present day. From vintage polaroids to mesmerizing 35mm shots — this category examines the best of what film photography has to offer...</p>
@@ -75,14 +80,20 @@ function Film(props) {
 
                                 </div>
 
-                                <Image
+                                {/* <Image
                                     src={elm.urls.small}
                                     height={0}
                                     width={1000}
                                     className='img'
                                     alt='image'
 
-                                />
+                                /> */}
+                                   <img
+                                  src={elm.urls.small}
+                                  className='img'
+                                  alt='image'
+                                >
+                                </img>
                                 {/* </div> */}
                             </Link>
                         </>

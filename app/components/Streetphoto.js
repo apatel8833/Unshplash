@@ -30,13 +30,18 @@ function Streetphoto(props) {
     return (
         <div>
               <div className='poster'>
-              <Image
+              {/* <Image
                     src={`https://source.unsplash.com/600x900/?Streetphoto`}
                     className='img'
                     height={100}
                     width={100}
                     alt='image'
-                />
+                /> */}
+                   <img
+                  src="https://source.unsplash.com/600x900/?Streetphoto"
+                  className='img'
+                  alt='image'
+                ></img>
                 <div className='content'>
                     <h1>Street Photography</h1>
                     <p>When the streets around you become your canvas, what can you discover? From quiet passages in charming towns to the hustle and bustle of larger cities — this category examines street photography in every form...</p>
@@ -76,14 +81,20 @@ function Streetphoto(props) {
 
                                 </div>
 
-                                <Image
+                                {/* <Image
                                     src={elm.urls.small}
                                     height={0}
                                     width={1000}
                                     className='img'
                                     alt='image'
 
-                                />
+                                /> */}
+                                   <img
+                                  src={elm.urls.small}
+                                  className='img'
+                                  alt='image'
+                                >
+                                </img>
                                 {/* </div> */}
                             </Link>
 

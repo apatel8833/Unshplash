@@ -31,13 +31,18 @@ function Art(props) {
     return (
         <div>
               <div className='poster'>
-              <Image
+              {/* <Image
                     src="https://source.unsplash.com/600x900/?art&culture"
                     className='img'
                     height={100}
                     width={100}
                     alt='image'
-                />
+                /> */}
+                   <img
+                  src="https://source.unsplash.com/600x900/?art&culture"
+                  className='img'
+                  alt='image'
+                ></img>
                 <div className='content'>
                     <h1>Art & Culture</h1>
                     <p>Your daily dose of culture — with photography showcasing the best in art, music and literature from around the world...</p>
@@ -77,14 +82,20 @@ function Art(props) {
 
                                 </div>
 
-                                <Image
+                                {/* <Image
                                     src={elm.urls.small}
                                     height={0}
                                     width={1000}
                                     className='img'
                                     alt='image'
 
-                                />
+                                /> */}
+                                   <img
+                                  src={elm.urls.small}
+                                  className='img'
+                                  alt='image'
+                                >
+                                </img>
                             </Link>
 
                         </>

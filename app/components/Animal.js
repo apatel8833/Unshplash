@@ -31,7 +31,7 @@ function Animal(props) {
     return (
         <div>
             <div className='poster'>
-                <Image
+                {/* <Image
                     src="https://source.unsplash.com/600x900/?animal"
                     className='img'
                     height={100}
@@ -39,7 +39,12 @@ function Animal(props) {
                     alt='image'
                 >
 
-                </Image>
+                </Image> */}
+                <img
+                  src="https://source.unsplash.com/600x900/?animal"
+                  className='img'
+                  alt='image'
+                ></img>
                 {/* <img src='https://source.unsplash.com/600x900/?animal'></img> */}
                 <div className='content'>
                     <h1>Animals</h1>
@@ -81,14 +86,20 @@ function Animal(props) {
                                     </Link>
 
                                 </div>
-                                <Image
+                                {/* <Image
                                     src={elm.urls.small}
                                     height={0}
                                     width={1000}
                                     className='img'
                                     alt='image'
 
-                                ></Image>
+                                ></Image> */}
+                                <img
+                                  src={elm.urls.small}
+                                  className='img'
+                                  alt='image'
+                                >
+                                </img>
 
                             </Link>
                         </>

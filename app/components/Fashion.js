@@ -29,13 +29,18 @@ function Fashion(props) {
     return (
         <div>
               <div className='poster'>
-              <Image
+              {/* <Image
                     src="https://source.unsplash.com/600x900/?Fashion&beauty"
                     className='img'
                     height={100}
                     width={100}
                     alt='image'
-                />
+                /> */}
+                   <img
+                  src="https://source.unsplash.com/600x900/?fashion&beauty"
+                  className='img'
+                  alt='image'
+                ></img>
                 <div className='content'>
                     <h1>Fashion & Beuty</h1>
                     <p>Fashion and Beauty are a powerful form of self-expression. This category documents style through inspiring shots of street fashion, skincare products, avant-garde editorial photographs, and more...</p>
@@ -75,14 +80,12 @@ function Fashion(props) {
 
                                 </div>
 
-                                <Image
-                                    src={elm.urls.small}
-                                    height={0}
-                                    width={1000}
-                                    className='img'
-                                    alt='image'
-
-                                />
+                                <img
+                                  src={elm.urls.small}
+                                  className='img'
+                                  alt='image'
+                                >
+                                </img>
                                 {/* </div> */}
                             </Link>
                         </>

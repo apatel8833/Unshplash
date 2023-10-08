@@ -30,13 +30,18 @@ function Athletics(props) {
     return (
         <div>
             <div className='poster'>
-                <Image
+                {/* <Image
                     src="https://source.unsplash.com/600x900/?athletics"
                     className='img'
                     height={100}
                     width={100}
                     alt='image'
-                />
+                /> */}
+                   <img
+                  src="https://source.unsplash.com/600x900/?athletics"
+                  className='img'
+                  alt='image'
+                ></img>
                 <div className='content'>
                     <h1>Athletics</h1>
                     <p>This category celebrates action in the every day — from the tough gym workouts, to tense basketball games, to the extreme heights of heliskiing. Get up close and personal with the raw emotions of the athlete, the frenzy of the court crowd, and the danger of challenging outdoor pursuits...</p>
@@ -76,14 +81,20 @@ function Athletics(props) {
 
                                 </div>
 
-                                <Image
+                                {/* <Image
                                     src={elm.urls.small}
                                     height={0}
                                     width={1000}
                                     className='img'
                                     alt='image'
 
-                                />
+                                /> */}
+                                   <img
+                                  src={elm.urls.small}
+                                  className='img'
+                                  alt='image'
+                                >
+                                </img>
                                 {/* </div> */}
                             </Link>
                         </>

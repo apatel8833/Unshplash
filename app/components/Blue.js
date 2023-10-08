@@ -28,13 +28,18 @@ function Blue(props) {
     return (
         <div>
             <div className='poster'>
-                <Image
+                {/* <Image
                     src="https://source.unsplash.com/600x900/?blue"
                     className='img'
                     height={100}
                     width={100}
                     alt='image'
-                />
+                /> */}
+                   <img
+                  src="https://source.unsplash.com/600x900/?blue"
+                  className='img'
+                  alt='image'
+                ></img>
                 <div className='content'>
                     <h1>Blue</h1>
                     <p>In a colorful world, sometimes monochrome is the most striking of all. Colors convey so much and choosing a single one can pack a powerful punch. We chose blue—maybe you can guess why? We hope this collection inspires your most colorful ideas!
@@ -75,14 +80,20 @@ function Blue(props) {
 
                                 </div>
 
-                                <Image
+                                {/* <Image
                                     src={elm.urls.small}
                                     height={0}
                                     width={1000}
                                     className='img'
                                     alt='image'
 
-                                />
+                                /> */}
+                                   <img
+                                  src={elm.urls.small}
+                                  className='img'
+                                  alt='image'
+                                >
+                                </img>
                                 {/* </div> */}
                             </Link>
                         </>

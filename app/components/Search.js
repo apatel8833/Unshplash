@@ -60,14 +60,20 @@ const Search = () => {
 
                                     </div>
 
-                                    <Image
+                                    {/* <Image
                                     src={elm.urls.small}
                                     height={0}
                                     width={1000}
                                     className='img'
                                     alt='image'
 
-                                />
+                                /> */}
+                                   <img
+                                  src={elm.urls.small}
+                                  className='img'
+                                  alt='image'
+                                >
+                                </img>
                                     {/* </div> */}
                                 </Link>
                             </>

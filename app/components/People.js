@@ -31,13 +31,18 @@ function People(props) {
     return (
         <div>
               <div className='poster'>
-              <Image
+              {/* <Image
                     src="https://source.unsplash.com/600x900/?people"
                     className='img'
                     height={100}
                     width={100}
                     alt='image'
-                />
+                /> */}
+                   <img
+                  src="https://source.unsplash.com/600x900/?people"
+                  className='img'
+                  alt='image'
+                ></img>
                 <div className='content'>
                     <h1>Peoples</h1>
                     <p>Real people, captured. Photography has the power to reflect the world around us, give voice to individuals and groups within our communities — and most importantly — tell their story...</p>
@@ -77,14 +82,20 @@ function People(props) {
 
                                 </div>
 
-                                <Image
+                                {/* <Image
                                     src={elm.urls.small}
                                     height={0}
                                     width={1000}
                                     className='img'
                                     alt='image'
 
-                                />
+                                /> */}
+                                   <img
+                                  src={elm.urls.small}
+                                  className='img'
+                                  alt='image'
+                                >
+                                </img>
                                 {/* </div> */}
                             </Link>
 

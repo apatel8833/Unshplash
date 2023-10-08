@@ -38,14 +38,19 @@ const Details = () => {
 
     <div>
       <div className='Detail'>
-        <Image
+        {/* <Image
           src={url.full}
           height={100}
           width={100}
           className="img"
           alt='image'
 
-        />
+        /> */}
+        <img
+         src={url.full}
+         className="img"
+         alt='image'
+        ></img>
         <div className='item'>
           {/* <Image
             src={usrr.small}

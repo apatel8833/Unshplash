@@ -31,13 +31,18 @@ function Travel(props) {
     return (
         <div>
               <div className='poster'>
-              <Image
+              {/* <Image
                     src={`https://source.unsplash.com/600x900/?travel`}
                     className='img'
                     height={100}
                     width={100}
                     alt='image'
-                />
+                /> */}
+                   <img
+                  src="https://source.unsplash.com/600x900/?travel"
+                  className='img'
+                  alt='image'
+                ></img>
                 <div className='content'>
                     <h1>Travels</h1>
                     <p>Discover hidden wonders and inspiring destinations around the world from the comfort of your own home.
@@ -78,14 +83,20 @@ function Travel(props) {
 
                                 </div>
 
-                                <Image
+                                {/* <Image
                                     src={elm.urls.small}
                                     height={0}
                                     width={1000}
                                     className='img'
                                     alt='image'
 
-                                />
+                                /> */}
+                                   <img
+                                  src={elm.urls.small}
+                                  className='img'
+                                  alt='image'
+                                >
+                                </img>
                                 {/* </div> */}
                             </Link>
 

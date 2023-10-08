@@ -29,13 +29,18 @@ function Bussiness(props) {
     return (
         <div>
               <div className='poster'>
-              <Image
+              {/* <Image
                     src="https://source.unsplash.com/600x900/?bussiness&work"
                     className='img'
                     height={100}
                     width={100}
                     alt='image'
-                />
+                /> */}
+                   <img
+                  src="https://source.unsplash.com/600x900/?bussiness&work"
+                  className='img'
+                  alt='image'
+                ></img>
                 <div className='content'>
                     <h1>Bussiness & Work</h1>
                     <p>Reflecting the realities of the modern workplace in their many forms — from images of remote working and start-ups to shots of engineers and artists at work...</p>
@@ -75,14 +80,20 @@ function Bussiness(props) {
 
                                 </div>
 
-                                <Image
+                                {/* <Image
                                     src={elm.urls.small}
                                     height={0}
                                     width={1000}
                                     className='img'
                                     alt='image'
 
-                                />
+                                /> */}
+                                   <img
+                                  src={elm.urls.small}
+                                  className='img'
+                                  alt='image'
+                                >
+                                </img>
                                 {/* </div> */}
                             </Link>
 
